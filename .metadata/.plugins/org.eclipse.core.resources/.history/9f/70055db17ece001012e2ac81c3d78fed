@@ -1,0 +1,5 @@
+spring.application.name=email-writer-proj
+
+gemini.api.url = ${}
+gemini.api.key = ${}
+

@@ -1,0 +1,101 @@
+package com.email.writer.service;
+
+
+import org.springframework.stereotype.Service;
+
+import com.email.writer.EmailRequest;
+
+import lombok.Value;
+
+@Service
+public class EmailGeneratorService {
+
+	
+	 
+	public String generateEmailReply(EmailRequest emailRequest)
+	{
+		
+		//Build Prompt
+	    private final WebClient webClient;
+	    private final String apiKey;
+
+	    public EmailGeneratorService(
+	            WebClient.Builder webClientBuilder,
+	            @Value("${gemini.base.url}") String baseUrl,
+	            @Value("${gemini.api.key}") String geminiApiKey) {
+
+	        this.apiKey = geminiApiKey;
+
+	        this.webClient = webClientBuilder
+	                .baseUrl(baseUrl)
+	                .build();
+	    }
+	    
+	    
+		String requestBody = String.format(
+			    """
+			    {
+			      "contents": [
+			        {
+			          "parts": [
+			            {
+			              "text": "%s"
+			            }
+			          ]
+			        }
+			      ]
+			    }
+			    """,
+			    prompt
+			);
+
+		
+		
+		//send request
+		
+		
+		//extract response
+		
+		
+		return "";
+	}
+	
+	private String  buildPrompt(EmailRequest emailRequest)
+	{
+		StringBuilder prompt = new StringBuilder();
+		prompt.append("Generate a professional email reply for the following emial;");
+		if(emailRequest.getTone() !=null && !emailRequest.getTone().isEmpty())
+		{
+			prompt.append("Use a ").append(emailRequest.getTone()).append(" tone.");
+			// use a professional/casual tone.
+		
+		}
+		prompt.append("Orginal Email: \n").append(emailRequest.getEmailContent());
+		return prompt.toString();
+	}
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

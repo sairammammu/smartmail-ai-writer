@@ -1,0 +1,35 @@
+package com.email.writer.service;
+
+import org.springframework.stereotype.Service;
+
+import com.email.writer.EmailRequest;
+
+@Service
+public class EmailGeneratorService {
+
+	
+	
+	public String generateEmailReply(EmailRequest emailRequest)
+	{
+		
+		//Build Prompt
+		 
+		public String buildPrompt(EmailRequest emailRequest)
+		{
+			return "";
+		}
+		
+		
+		//prepare raw JSON body
+		
+		//send request
+		
+		
+		//extract response
+		
+		
+		return "";
+	}
+	
+	
+}
