@@ -1,0 +1,20 @@
+# Java / Spring Boot
+target/
+*.jar
+*.war
+*.class
+application.properties
+application.yml
+
+# Node / React
+node_modules/
+dist/
+build/
+
+# Chrome Extension
+*.crx
+
+# System files
+.DS_Store
+.env
+*.log
